@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#17152f">
+<title>A Little Universe for Srishti ✨</title>
+<style>
+:root{--ink:#fff8f0;--muted:#d9d0ee;--pink:#f4c9e8;--lav:#d9c4ff;--night:#17152f}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);font-family:Georgia,serif;background:radial-gradient(ellipse at 50% 0%,#40315e 0,#211d42 38%,#111629 100%);min-height:100vh}
+main{width:min(760px,100%);margin:auto;padding:28px 18px 60px}.top{text-align:center;padding:26px 8px 20px}.eyebrow{font:700 11px/1.5 system-ui;letter-spacing:.28em;text-transform:uppercase;color:#d8c7f4}.top h1{font-size:clamp(2.25rem,8vw,4.5rem);line-height:1.04;margin:17px 0 12px;font-weight:500}.top p{color:var(--muted);font:15px/1.7 system-ui;max-width:480px;margin:0 auto}.moon{font-size:68px;filter:drop-shadow(0 0 24px #d8b9ff);animation:float 4s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-10px)}}@keyframes twinkle{to{opacity:.35;transform:scale(.75)}}
+.panel{position:relative;overflow:hidden;border:1px solid #ffffff25;border-radius:24px;background:#ffffff0d;padding:25px;margin:18px 0;box-shadow:0 18px 55px #07081735}
+.panel:before{content:"✦       ·       ✧       ·       ✦";position:absolute;top:13px;right:18px;color:#f7e5b7;opacity:.65;letter-spacing:5px;font-size:12px}
+h2{font-size:clamp(1.45rem,5vw,2rem);font-weight:500;margin:0 0 12px}p{line-height:1.75}.muted{color:var(--muted)}.step{font:700 11px system-ui;letter-spacing:.2em;color:#e8c8ed;text-transform:uppercase;margin-bottom:10px}
+button{border:0;cursor:pointer;border-radius:30px;padding:13px 20px;background:linear-gradient(110deg,#f7d6eb,#ddceff);color:#302344;font:700 14px system-ui;min-height:46px;transition:transform .2s,filter .2s}button:hover{transform:translateY(-2px);filter:brightness(1.05)}button:focus-visible{outline:3px solid white;outline-offset:3px}.secondary{background:#ffffff14;color:white;border:1px solid #ffffff40}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}.hidden{display:none!important}.reveal{border-left:2px solid #e8c9f1;padding:5px 0 5px 17px;margin:18px 0;color:#fff4fb;font-size:18px;line-height:1.7;min-height:56px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px}.starbtn{background:#ffffff12;border:1px solid #ffffff30;color:#fff;border-radius:16px;padding:16px 8px;font:14px system-ui}.starbtn span{display:block;font-size:25px;margin-bottom:7px}.letter{background:#fff8e9;color:#51415a;border-radius:17px;padding:22px;line-height:1.85}.letter p{margin:0 0 12px}.letter p:last-child{margin-bottom:0}.progress{height:5px;background:#ffffff20;border-radius:10px;overflow:hidden;margin:22px 0 8px}.bar{height:100%;width:0;background:#f3d2ed;transition:width .4s}.foot{text-align:center;color:#c9c0df;font:12px/1.7 system-ui;margin-top:30px}
+@media(max-width:480px){main{padding:16px 13px 40px}.panel{padding:21px 17px}.grid{gap:7px}.starbtn{font-size:12px;padding:13px 5px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body>
+<main>
+<header class="top">
+ <div class="moon" aria-hidden="true">🌙</div>
+ <div class="eyebrow">a tiny universe · made with care</div>
+ <h1>For Srishti<br><span style="color:#f4d2eb">Sharma</span></h1>
+ <p>A little escape from chapters, deadlines and busy days. No homework here. Just a few moments that belong to you. ✨</p>
+</header>
+<div class="progress" aria-label="Your journey progress"><div class="bar" id="bar"></div></div>
+<div class="muted" style="text-align:right;font:12px system-ui" id="count">A little journey · 1 of 5</div>
+
+<section class="panel" id="welcome">
+ <div class="step">01 · First, arrive</div><h2>Welcome to your little universe.</h2>
+ <p class="muted">Put the books down for a moment, relax your shoulders, and take one slow breath. You don't have to earn a break. You deserve one already.</p>
+ <div class="actions"><button class="next" data-next="breath">I'm here ✨</button></div>
+</section>
+<section class="panel hidden" id="breath">
+ <div class="step">02 · A tiny pause</div><h2>Nothing to finish. Nowhere to rush.</h2>
+ <p class="muted">Let this be a small pause in a very full day. The world can wait for a minute.</p>
+ <div class="reveal" id="breathline">You are a person, not a to-do list. 💜</div>
+ <div class="actions"><button class="next" data-next="stars">A little more, please →</button></div>
+</section>
+<section class="panel hidden" id="stars">
+ <div class="step">03 · Pick a star</div><h2>Six little reminders, just for you.</h2>
+ <p class="muted">Tap any star. Each one has a message tucked inside.</p>
+ <div class="grid">
+  <button class="starbtn" data-message="You make ordinary days feel a little brighter. 🌻"><span>⭐</span>Sunshine</button>
+  <button class="starbtn" data-message="You don't need perfect marks or perfect days to be wonderful. 🌙"><span>🌙</span>Moonlight</button>
+  <button class="starbtn" data-message="Your particular kind of magic is worth celebrating. 🦋"><span>🦋</span>Magic</button>
+  <button class="starbtn" data-message="Rest is not falling behind. It's part of being human. ☁️"><span>☁️</span>Cloud</button>
+  <button class="starbtn" data-message="Even on a hard day, you are still doing better than you think. 🌷"><span>🌷</span>Flower</button>
+  <button class="starbtn" data-message="There are so many lovely little moments still waiting for you. ✨"><span>✨</span>Stardust</button>
+ </div>
+ <div class="reveal" id="star-message" aria-live="polite">Your surprise will appear here…</div>
+ <div class="actions"><button class="next" data-next="letter">Open your letter 💌</button></div>
+</section>
+<section class="panel hidden" id="letter">
+ <div class="step">04 · A note to keep</div><h2>Dear Srishti,</h2>
+ <div class="letter">
+  <p>I know studying can make the days feel long. There are pages to read, things to remember, and expectations coming from every direction.</p>
+  <p>But I hope you remember that you are so much more than your marks, your results, or how much you get done in a day.</p>
+  <p>You are allowed to laugh at silly things, enjoy your favourite snack, look at the sky, listen to a song, and take a proper break without feeling guilty.</p>
+  <p>I hope tomorrow is a little lighter, today brings you one unexpected smile, and you never forget that you matter.</p>
+  <p style="text-align:right;font-style:italic;margin-top:20px">Made especially for you, with a little stardust. 💜</p>
+ </div>
+ <div class="actions"><button class="next" data-next="final">One last surprise →</button></div>
+</section>
+<section class="panel hidden" id="final">
+ <div class="step">05 · The final star</div><div style="font-size:42px">🌌</div>
+ <h2>One last thing, Srishti…</h2>
+ <p class="muted">In a universe this enormous, there's only one you. That's already something extraordinary.</p>
+ <button id="final-button">Reveal the last message 💜</button>
+ <div class="reveal hidden" id="final-message" aria-live="polite">You deserve good days, kind people, peaceful sleep, and reasons to smile that have nothing to do with exams. Keep being wonderfully you. ✨</div>
+ <p class="muted" style="font-size:13px;margin-top:20px">Whenever the day gets too loud, this little corner is here to remind you to pause.</p>
+ <button class="secondary" id="again">Visit your universe again ↺</button>
+</section>
+<footer class="foot">A small reminder from someone who wanted to make you smile.<br>Made of pixels, kindness and stardust. ✨</footer>
+</main>
+<script>
+(()=>{
+ const ids=['welcome','breath','stars','letter','final'];let current=0;
+ const bar=document.getElementById('bar'),count=document.getElementById('count');
+ function show(index){current=index;ids.forEach((id,i)=>document.getElementById(id).classList.toggle('hidden',i!==index));bar.style.width=((index+1)/ids.length*100)+'%';count.textContent=`A little journey · ${index+1} of ${ids.length}`;document.getElementById(ids[index]).scrollIntoView({behavior:'smooth',block:'start'});}
+ document.querySelectorAll('.next').forEach(button=>button.addEventListener('click',()=>show(ids.indexOf(button.dataset.next))));
+ document.querySelectorAll('.starbtn').forEach(button=>button.addEventListener('click',()=>{document.getElementById('star-message').textContent=button.dataset.message;}));
+ document.getElementById('final-button').addEventListener('click',()=>document.getElementById('final-message').classList.remove('hidden'));
+ document.getElementById('again').addEventListener('click',()=>{document.getElementById('star-message').textContent='Your surprise will appear here…';document.getElementById('final-message').classList.add('hidden');show(0);});
+})();
+</script>
+</body>
+</html>
